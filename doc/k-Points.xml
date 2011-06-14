@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+  k-Points.xml            k-Points package documentation
+
+         Copyright (C) 2011, Mohamed Barakat, University of Kaiserslautern
+
+-->
+
+<Chapter Label="k-Points">
+<Heading>k-Points</Heading>
+
+<Section Label="k-Points:Category">
+<Heading>k-Points: Category and Representations</Heading>
+
+</Section>
+
+<Section Label="k-Points:Constructors">
+<Heading>k-Points: Constructors</Heading>
+
+</Section>
+
+<Section Label="k-Points:Properties">
+<Heading>k-Points: Properties</Heading>
+
+
+</Section>
+
+<Section Label="k-Points:Attributes">
+<Heading>k-Points: Attributes</Heading>
+
+<!-- the following attributes are intrinsic in the sense that
+     they can safely be attached to any copy of the sheaf -->
+
+</Section>
+
+<Section Label="k-Points:Operations">
+<Heading>k-Points: Operations and Functions</Heading>
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>
