@@ -18,6 +18,12 @@
 
 # basic operations:
 
+DeclareOperation( "IdealOfCoefficients",
+        [ IsHomalgMatrix, IsList ] );
+
+DeclareOperation( "GradedIdealOfCoefficients",
+        [ IsHomalgMatrix, IsList ] );
+
 ####################################
 #
 # synonyms:

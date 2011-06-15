@@ -16,3 +16,5 @@
 
 # basic operations:
 
+DeclareOperation( "MatrixOfCoefficients",
+        [ IsHomalgMatrix, IsList ] );

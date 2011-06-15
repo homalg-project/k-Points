@@ -38,6 +38,9 @@
 <Section Label="k-Points:Operations">
 <Heading>k-Points: Operations and Functions</Heading>
 
+<#Include Label="IdealOfCoefficients">
+<#Include Label="GradedIdealOfCoefficients">
+
 </Section>
 <!-- ############################################################ -->
 
