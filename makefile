@@ -4,7 +4,7 @@ doc: doc/manual.six
 
 doc/manual.six: makedoc.g maketest.g ListOfDocFiles.g \
 		PackageInfo.g \
-		doc/k-Points.bib doc/*.xml \
+		doc/k-Points.bib doc/*.xml doc/*.css \
 		gap/*.gd gap/*.gi examples/*.g examples/doc/*.g
 	        gap makedoc.g
 
