@@ -13,6 +13,8 @@ WriteBibXMLextFile( "doc/k-PointsBib.xml", bib );
 
 Read( "ListOfDocFiles.g" );
 
+PrintTo( "VERSION", PackageInfo( "k-Points" )[1].Version );
+
 MakeGAPDocDoc( "doc", "k-PointsForHomalg", list, "k-PointsForHomalg" );
 
 GAPDocManualLab("k-Points");
