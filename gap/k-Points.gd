@@ -24,6 +24,18 @@ DeclareOperation( "IdealOfCoefficients",
 DeclareOperation( "GradedIdealOfCoefficients",
         [ IsHomalgMatrix, IsList ] );
 
+DeclareOperation( "AssociatedPrimes",
+        [ IsHomalgModule ] );
+
+DeclareOperation( "AssociatedMaximalIdeals",
+        [ IsHomalgModule ] );
+
+DeclareOperation( "AssociatedPrimesOfMaximalCodimension",
+        [ IsHomalgModule ] );
+
+DeclareOperation( "APoint",
+        [ IsHomalgModule ] );
+
 ####################################
 #
 # synonyms:

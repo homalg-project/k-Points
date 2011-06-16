@@ -8,4 +8,7 @@ list := [
          "../examples/doc/MatrixOfCoefficients.g",
          "../examples/doc/IdealOfCoefficients.g",
          "../examples/doc/GradedIdealOfCoefficients.g",
+         "../examples/doc/AssociatedPrimes.g",
+         "../examples/doc/AssociatedPrimesOfMaximalCodimension.g",
+         "../examples/doc/APoint.g",
          ];

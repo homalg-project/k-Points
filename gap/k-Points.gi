@@ -79,3 +79,91 @@ InstallMethod( GradedIdealOfCoefficients,
     return GradedLeftSubmodule( BasisOfRows( MatrixOfCoefficients( mat, u ) ) );
     
 end );
+
+##  <#GAPDoc Label="AssociatedPrimes">
+##  <ManSection>
+##    <Oper Arg="I" Name="AssociatedPrimes" Label="for an ideal"/>
+##    <Description>
+##      <#Include Label="AssociatedPrimes:example">
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( AssociatedPrimes,
+        "for an ideal",	## IsHomalgModule also covers the graded case
+        [ IsHomalgModule and ConstructedAsAnIdeal ],
+        
+  function( I )
+    
+    return List( PrimaryDecomposition( I ), a -> a[2] );
+    
+end );
+
+##
+InstallMethod( AssociatedMaximalIdeals,
+        "for an ideal",	## IsHomalgModule also covers the graded case
+        [ IsHomalgModule and ConstructedAsAnIdeal ],
+        
+  function( I )
+    local R, dim, Ass;
+    
+    R := HomalgRing( I );
+    
+    if not HasKrullDimension( R ) then
+        TryNextMethod( );
+    fi;
+    
+    dim := KrullDimension( R );
+    
+    Ass := AssociatedPrimes( I );
+    
+    return Filtered( Ass, P -> Grade( FactorObject( P ) ) = dim );
+    
+end );
+
+##  <#GAPDoc Label="AssociatedPrimesOfMaximalCodimension">
+##  <ManSection>
+##    <Oper Arg="I" Name="AssociatedPrimesOfMaximalCodimension" Label="for an ideal"/>
+##    <Description>
+##      <#Include Label="AssociatedPrimesOfMaximalCodimension:example">
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( AssociatedPrimesOfMaximalCodimension,
+        "for an ideal",	## IsHomalgModule also covers the graded case
+        [ IsHomalgModule and ConstructedAsAnIdeal ],
+        
+  function( I )
+    local Ass, max_depth;
+    
+    Ass := AssociatedPrimes( I );
+    
+    max_depth := Maximum( List( Ass, P -> Grade( FactorObject( P ) ) ) );
+    
+    return Filtered( Ass, P -> Grade( FactorObject( P ) ) = max_depth );
+    
+end );
+
+##  <#GAPDoc Label="APoint">
+##  <ManSection>
+##    <Oper Arg="I" Name="APoint" Label="for an ideal"/>
+##    <Description>
+##      <#Include Label="APoint:example">
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( APoint,
+        "for an ideal",	## IsHomalgModule also covers the graded case
+        [ IsFinitelyPresentedSubmoduleRep and ConstructedAsAnIdeal ],
+        
+  function( I )
+    local Ass;
+    
+    Ass := AssociatedPrimesOfMaximalCodimension( I );
+    
+    if Ass = [ ] then
+        return false;
+    fi;
+    
+    return Ass[1];
+    
+end );

@@ -40,6 +40,9 @@
 
 <#Include Label="IdealOfCoefficients">
 <#Include Label="GradedIdealOfCoefficients">
+<#Include Label="AssociatedPrimes">
+<#Include Label="AssociatedPrimesOfMaximalCodimension">
+<#Include Label="APoint">
 
 </Section>
 <!-- ############################################################ -->

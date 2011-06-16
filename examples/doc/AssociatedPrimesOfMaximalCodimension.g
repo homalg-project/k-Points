@@ -1,11 +1,11 @@
-##  <#GAPDoc Label="APoint:example">
+##  <#GAPDoc Label="AssociatedPrimesOfMaximalCodimension:example">
 ##  <Example><![CDATA[
 ##  gap> A := HomalgFieldOfRationalsInDefaultCAS( ) * "a,b,c";;
 ##  gap> I := LeftSubmodule( "b^2*c,a*b*c,b^3,a*b^2,a^2*b,a^3*c-a^2*c^2,a^4-a^2*c^2", A );
 ##  <A torsion-free (left) ideal given by 7 generators>
-##  gap> pt := APoint( I );
-##  <A torsion-free (left) ideal given by 3 generators>
-##  gap> Display( pt );
+##  gap> Ass := AssociatedPrimesOfMaximalCodimension( I );
+##  [ <A torsion-free (left) ideal given by 3 generators> ]
+##  gap> Perform( Ass, Display );
 ##  c,
 ##  b,
 ##  a 
@@ -20,6 +20,6 @@ A := HomalgFieldOfRationalsInDefaultCAS( ) * "a,b,c";
 
 I := LeftSubmodule( "b^2*c,a*b*c,b^3,a*b^2,a^2*b,a^3*c-a^2*c^2,a^4-a^2*c^2", A );
 
-pt := APoint( I );
+Ass := AssociatedPrimesOfMaximalCodimension( I );
 
-Display( pt );
+Perform( Ass, Display );
