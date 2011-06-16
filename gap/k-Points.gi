@@ -16,7 +16,7 @@
 
 ##
 InstallMethod( MatrixOfCoefficients,
-        "for a homalg matrix and a list of variables",
+        "for a homalg matrix over a graded ring and a list of variables",
         [ IsMatrixOverGradedRing, IsList ],
         
   function( mat, u )
@@ -25,6 +25,21 @@ InstallMethod( MatrixOfCoefficients,
                    MatrixOfCoefficients(
                            UnderlyingMatrixOverNonGradedRing( mat ),
                            List( u, UnderlyingNonGradedRingElement ) ),
+                   HomalgRing( mat ) );
+    
+end );
+
+##
+InstallMethod( MatrixOfCoefficients,
+        "for a homalg matrix over a residue class ring and a list of variables",
+        [ IsHomalgResidueClassMatrixRep, IsList ],
+        
+  function( mat, u )
+    
+    return HomalgResidueClassMatrix(
+                   MatrixOfCoefficients(
+                           Eval( mat ),
+                           List( u, EvalRingElement ) ),
                    HomalgRing( mat ) );
     
 end );
