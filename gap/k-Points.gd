@@ -21,8 +21,14 @@
 DeclareOperation( "IdealOfCoefficients",
         [ IsHomalgMatrix, IsList ] );
 
+DeclareOperation( "IdealOfCoefficients",
+        [ IsHomalgMorphism, IsList ] );
+
 DeclareOperation( "GradedIdealOfCoefficients",
         [ IsHomalgMatrix, IsList ] );
+
+DeclareOperation( "GradedIdealOfCoefficients",
+        [ IsHomalgMorphism, IsList ] );
 
 DeclareOperation( "AssociatedPrimes",
         [ IsHomalgModule ] );

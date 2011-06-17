@@ -44,7 +44,7 @@ InstallMethod( MatrixOfCoefficients,
     
 end );
 
-##  <#GAPDoc Label="IdealOfCoefficients">
+##  <#GAPDoc Label="IdealOfCoefficients:matrix">
 ##  <ManSection>
 ##    <Oper Arg="mat,u" Name="IdealOfCoefficients" Label="for a matrix and a list of variables"/>
 ##    <Description>
@@ -62,9 +62,26 @@ InstallMethod( IdealOfCoefficients,
     
 end );
 
-##  <#GAPDoc Label="GradedIdealOfCoefficients">
+##  <#GAPDoc Label="IdealOfCoefficients:morphism">
 ##  <ManSection>
-##    <Oper Arg="mat,u" Name="GradedIdealOfCoefficients" Label="for a matrix and a list of variables"/>
+##    <Oper Arg="mor,u" Name="IdealOfCoefficients" Label="for a matrix and a list of variables"/>
+##    <Description>
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( IdealOfCoefficients,
+        "for a homalg morphism and a list of variables",
+        [ IsHomalgMorphism, IsList ],
+        
+  function( mor, u )
+    
+    return IdealOfCoefficients( MatrixOfMap( mor ), u );
+    
+end );
+
+##  <#GAPDoc Label="GradedIdealOfCoefficients:matrix">
+##  <ManSection>
+##    <Oper Arg="mat,u" Name="GradedIdealOfCoefficients" Label="for a matrix over a graded ring and a list of variables"/>
 ##    <Description>
 ##      <#Include Label="GradedIdealOfCoefficients:example">
 ##    </Description>
@@ -77,6 +94,23 @@ InstallMethod( GradedIdealOfCoefficients,
   function( mat, u )
     
     return GradedLeftSubmodule( BasisOfRows( MatrixOfCoefficients( mat, u ) ) );
+    
+end );
+
+##  <#GAPDoc Label="GradedIdealOfCoefficients:morphism">
+##  <ManSection>
+##    <Oper Arg="mor,u" Name="GradedIdealOfCoefficients" Label="for a morphism of graded modules and a list of variables"/>
+##    <Description>
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( GradedIdealOfCoefficients,
+        "for a homalg morphism and a list of variables",
+        [ IsHomalgMorphism, IsList ],
+        
+  function( mor, u )
+    
+    return GradedIdealOfCoefficients( MatrixOfMap( mor ), u );
     
 end );
 

@@ -38,8 +38,10 @@
 <Section Label="k-Points:Operations">
 <Heading>k-Points: Operations and Functions</Heading>
 
-<#Include Label="IdealOfCoefficients">
-<#Include Label="GradedIdealOfCoefficients">
+<#Include Label="IdealOfCoefficients:matrix">
+<#Include Label="IdealOfCoefficients:morphism">
+<#Include Label="GradedIdealOfCoefficients:matrix">
+<#Include Label="GradedIdealOfCoefficients:morphism">
 <#Include Label="AssociatedPrimes">
 <#Include Label="AssociatedPrimesOfMaximalCodimension">
 <#Include Label="APoint">
