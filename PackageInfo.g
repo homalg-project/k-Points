@@ -136,6 +136,22 @@ Persons := [
     Place         := "Kaiserslautern",
     Institution   := "University of Kaiserslautern"
   ),
+  rec(
+    LastName      := "Lange-Hegermann",
+    FirstNames    := "Markus",
+    IsAuthor      := true,
+    IsMaintainer  := true,
+    Email         := "markus.lange.hegermann@rwth-aachen.de",
+    WWWHome       := "http://wwwb.math.rwth-aachen.de/~markus/",
+    PostalAddress := Concatenation( [
+                       "Markus Lange-Hegermann\n",
+                       "Lehrstuhl B fuer Mathematik, RWTH Aachen\n",
+                       "Templergraben 64\n",
+                       "52062 Aachen\n",
+                       "Germany" ] ),
+    Place         := "Aachen",
+    Institution   := "RWTH Aachen University"
+  ),
 # provide such a record for each author and/or maintainer ...
   
 ],
@@ -284,6 +300,8 @@ BannerString := Concatenation(
   "Loading  k-Points ", ~.Version, "\n",
   "by ", ~.Persons[1].FirstNames, " ", ~.Persons[1].LastName,
         " (", ~.Persons[1].WWWHome, ")\n",
+  "   ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
+        " (", ~.Persons[2].WWWHome, ")\n",
   "Type:\n",
   "  ?k-Points:                 ## for the contents of the manual\n",
   "  ?k-Points:x                ## for chapter/section/topic x\n",
