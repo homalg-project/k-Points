@@ -64,7 +64,7 @@ end );
 
 ##  <#GAPDoc Label="IdealOfCoefficients:morphism">
 ##  <ManSection>
-##    <Oper Arg="mor,u" Name="IdealOfCoefficients" Label="for a matrix and a list of variables"/>
+##    <Oper Arg="mor,u" Name="IdealOfCoefficients" Label="for a morphism and a list of variables"/>
 ##    <Description>
 ##    </Description>
 ##  </ManSection>
