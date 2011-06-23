@@ -71,11 +71,11 @@ end );
 ##  <#/GAPDoc>
 InstallMethod( IdealOfCoefficients,
         "for a homalg morphism and a list of variables",
-        [ IsHomalgMorphism, IsList ],
+        [ IsHomalgStaticMorphism, IsList ],
         
   function( mor, u )
     
-    return IdealOfCoefficients( MatrixOfMap( mor ), u );
+    return IdealOfCoefficients( MatrixOfMap( DecideZero( mor ) ), u );
     
 end );
 
