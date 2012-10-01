@@ -19,5 +19,5 @@ MakeGAPDocDoc( "doc", "k-PointsForHomalg", list, "k-PointsForHomalg" );
 
 GAPDocManualLab("k-Points");
 
-quit;
+QUIT;
 
