@@ -10,6 +10,21 @@
 
 ####################################
 #
+# attributes:
+#
+####################################
+
+DeclareAttribute( "AssociatedPrimes",
+        IsHomalgModule );
+
+DeclareAttribute( "AssociatedMaximalIdeals",
+        IsHomalgModule );
+
+DeclareAttribute( "AssociatedPrimesOfMaximalCodimension",
+        IsHomalgModule );
+
+####################################
+#
 # global functions and operations:
 #
 ####################################
@@ -29,15 +44,6 @@ DeclareOperation( "GradedIdealOfCoefficients",
 
 DeclareOperation( "GradedIdealOfCoefficients",
         [ IsHomalgMorphism, IsList ] );
-
-DeclareOperation( "AssociatedPrimes",
-        [ IsHomalgModule ] );
-
-DeclareOperation( "AssociatedMaximalIdeals",
-        [ IsHomalgModule ] );
-
-DeclareOperation( "AssociatedPrimesOfMaximalCodimension",
-        [ IsHomalgModule ] );
 
 DeclareOperation( "APoint",
         [ IsHomalgModule ] );

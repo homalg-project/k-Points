@@ -28,7 +28,7 @@ Subtitle := "A homalg based package to construct algebraic solutions",
 ##  of valid version numbers. For an automatic package distribution update
 ##  you must provide a new version number even after small changes.
 Version := Maximum( [
-  "2012.10.22", ## Mohamed's version
+  "2013.09.18", ## Mohamed's version
 ## this line prevents merge conflicts
   "2011.06.01", ## Alban's version
 ] ),
