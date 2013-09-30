@@ -14,15 +14,6 @@
 #
 ####################################
 
-DeclareAttribute( "AssociatedPrimes",
-        IsHomalgModule );
-
-DeclareAttribute( "AssociatedMaximalIdeals",
-        IsHomalgModule );
-
-DeclareAttribute( "AssociatedPrimesOfMaximalCodimension",
-        IsHomalgModule );
-
 ####################################
 #
 # global functions and operations:

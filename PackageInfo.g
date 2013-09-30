@@ -28,7 +28,7 @@ Subtitle := "A homalg based package to construct algebraic solutions",
 ##  of valid version numbers. For an automatic package distribution update
 ##  you must provide a new version number even after small changes.
 Version := Maximum( [
-  "2013.09.18", ## Mohamed's version
+  "2013.09.19", ## Mohamed's version
 ## this line prevents merge conflicts
   "2011.06.01", ## Alban's version
 ] ),
@@ -266,7 +266,12 @@ Dependencies := rec(
   # list of pairs [package name, (least) version],  package name is case
   # insensitive, least version denoted with '>=' prepended to version string.
   # without these, the package will not load
-  NeededOtherPackages := [ [ "GradedModules", ">= 2011.05.20" ], [ "Modules", ">= 2011.06.15" ], [ "MatricesForHomalg", ">= 2011.06.15" ], [ "GradedRingForHomalg", ">= 2011.06.15" ], [ "GAPDoc", ">= 1.0" ] ],
+  NeededOtherPackages := [
+                   [ "GradedModules", ">= 2011.05.20" ],
+                   [ "Modules", ">= 2013.09.19" ],
+                   [ "MatricesForHomalg", ">= 2011.06.15" ],
+                   [ "GradedRingForHomalg", ">= 2011.06.15" ],
+                   [ "GAPDoc", ">= 1.0" ] ],
   # without these the package will issue a warning while loading
   # SuggestedOtherPackages := [],
   SuggestedOtherPackages := [ ],
