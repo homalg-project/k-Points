@@ -167,7 +167,6 @@ Persons := [
 ##
 # Status := "accepted",
 Status := "dev",
-
 ##  You must provide the next two entries if and only if the status is 
 ##  "accepted" because is was successfully refereed:
 # format: 'name (place)'
@@ -207,6 +206,8 @@ PackageInfoURL :=
 #   is an example of how to create a <span class=\"pkgname\">GAP</span> \
 #   package. It has little functionality except for being a package",
 #
+AbstractHTML   :=  "",
+
 PackageWWWHome := "http://homalg.math.rwth-aachen.de/index.php/unreleased/k-points",
 #               
 ##  Here is the information on the help books of the package, used for
@@ -240,8 +241,6 @@ PackageDoc := rec(
   # use same as in GAP            
   BookName  := "k-Points",
   # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
-  Archive := 
-    "http://homalg.math.rwth-aachen.de/~barakat/homalg-project/k-Points/k-Points.tar.gz",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
